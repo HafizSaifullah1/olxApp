@@ -45,7 +45,7 @@ for(let i=0; i<productData.length; i++){
     console.log(obj)
     main.innerHTML += `
     <div class="card mx-4 mt-5" >
-    <img height="160px" src="${obj.imgUrl}"
+    <img height="50%" class="img-fluid" src="${obj.imgUrl}"
       class="card-img-top" alt="...">
     <div class="card-body">
       <h5 class="card-title">${obj.productName}</h5>
