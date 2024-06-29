@@ -45,10 +45,12 @@ for(let i=0; i<productData.length; i++){
     console.log(obj)
     main.innerHTML += `
     <div class="card mx-4 mt-5" >
-    <img height="50%" class="img-fluid" src="${obj.imgUrl}"
+    <img  class="img-fluid" src="${obj.imgUrl}"
       class="card-img-top" alt="...">
     <div class="card-body">
-      <h5 class="card-title">${obj.productName}</h5>
+      <h4 class="card-title">${obj.productName}</h4>
+      <h5>${obj.productPrice}</h5>
+      <h6>${obj.location} </h6>
       <p class="card-text">${obj.textArea}</p>
       <p class="card-text">${obj.date}</p>
       <a href="../details/detail.html" class="btn btn-primary" onclick="getId('${obj.id}')">Details</a>

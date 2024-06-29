@@ -1,7 +1,7 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
 import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-analytics.js";
-import { getDatabase, push, ref,set } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js";
+import { getDatabase, push, ref, set, onValue } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js";
 
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -22,35 +22,36 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
-
-const db = getDatabase()
-
-
-var productPrice = document.getElementById("productPrice")
-var productName = document.getElementById("productName")
-var imgUrl = document.getElementById("imgUrl")
-var date = document.getElementById("date")
-var textArea = document.getElementById("textArea")
+const db = getDatabase();
 
 
-window.addProduct = function (){
 
-    var obj = {
-        productPrice: productPrice.value,
-        productName: productName.value,
-        imgUrl: imgUrl.value,
-        date: date.value,
-        textArea: textArea.value
-    }
-    // console.log(obj)
+var image = document.getElementById("image")
+var price = document.getElementById("price")
+var condition = document.getElementById("condition")
+var description = document.getElementById("description")
+var location = document.getElementById("location")
+  
+var id = localStorage.getItem("p-Id")
 
-    obj.id = push(ref(db,"item")).key
-    var reference = ref(db,`item/${obj.id}`)
-    set(reference, obj)
-        .then(function () {
-            window.location.assign("../main/main.html")
-        })
-        .catch(function (err) {
-            console.log(err);
-        })
+
+
+function getData() {
+    // var id = localStorage.getItem("p-Id")
+    console.log(id)
+    var reference = ref(db, `item/${id}`)
+    onValue(reference, function (data) {
+        var detail = data.val()
+        console.log(detail)
+
+        image.src = detail.imgUrl
+        price.innerHTML = detail.productPrice
+        condition.innerHTML = detail.date
+        description.innerHTML = detail.textArea
+        location.innerHTML = detail.location
+
+    })
+
 }
+
+getData()
