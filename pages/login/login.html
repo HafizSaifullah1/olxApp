@@ -4,49 +4,67 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <title>Login Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .container {
+            margin-top: 10vh;
+        }
+        .form-control {
+            width: 70%;
+            padding: 10px;
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+        .btn-login {
+            background-color: #343a40;
+            color: white;
+            width: 19%;
+            padding: 10px;
+            font-size: 16px;
+        }
+        .login-img {
+            max-width: 60%;
+            height: auto;
+            margin-top: 60px;
+        }
+    </style>
 </head>
 
 <body>
-    <div class="container " style="margin-top: 10%;">
+    <div class="container">
         <div class="row">
-            <div class="col-md-6">
-                <div class="text-center  fw-bold">
-                    <h1>Login </h1>
+            <div class="col-lg-6 mx-auto">
+                <div class="text-center">
+                    <h1>Login</h1>
                 </div>
 
-                <div class="container border border-2 shadow text-center me-2 pt-5 ">
-                    <div class="pt-2">
-                        <span class="fs-5 fw-bold">Email:</span><input type="email" name="" id="email"
-                            placeholder="Email">
-                    </div>
-
-                    <div class="pb-5 pt-4">
-                        <span class="fs-5 fw-bold">Password:</span><input class="me-2" type="password" name="password"
-                            id="password" placeholder="password">
-                    </div>
-
-                    <button onclick="Login()" class="btn btn-2 bg-dark text-white">Login</button>
-                    <p class="pt-3">No registered ? <a style="text-decoration: none;" href="../../index.html">Signup
-                            here</a>
-                    </p>
+                <div class="card shadow p-4 ">
+                    <form>
+                        <div class="mb-3 ms-5">
+                            <label for="email" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
+                        </div>
+                        <div class="mb-3 ms-5">
+                            <label for="password" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="password" placeholder="Password">
+                        </div>
+                        <button  type="submit" class="btn btn-login ms-5">Login</button>
+                    </form>
+                    <p class="pt-3 text-center">Not registered? <a href="../../index.html">Signup here</a></p>
                 </div>
             </div>
 
-
-            <div class="col-md-6 mt-5 ps-5">
-                <img height="350px" src="login pic.jpg" alt="">
+            <div class="col-lg-6 mt-4 mt-lg-0">
+                <img src="login pic.jpg" class="login-img img-fluid" alt="Login Image">
             </div>
-
         </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
-    <script type="module" src="login.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
