@@ -40,7 +40,7 @@ window.signup = function () {
 
         .then(function (res) {
             console.log(res)
-            window.location.assign("../pages/login/login.html")
+            window.location.assign("/pages/login/login.html")
         })
         .catch(function (err) {
             console.log(err);
