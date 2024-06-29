@@ -13,36 +13,44 @@
 <body>
     <div class="container" style="margin-top: 10%;">
         <div class="row">
-            <div class="col-md-6 ">
-                <div class="text-center  fw-bold">
+            <div class="col-md-6">
+                <div class="text-center fw-bold">
                     <h1>Sign <span class="text-">Up</span></h1>
                 </div>
 
-                <div class="container border border-2 shadow text-center " style="height: 300px;">
+                <div class="container border border-2 shadow text-center p-4" style="height: auto;">
+                    <form>
+                        <div class="mb-3 row align-items-center">
+                            <label for="userName" class="col-12 col-md-4 col-form-label text-md-end text-start fs-5 fw-bold">Name:</label>
+                            <div class="col-12 col-md-8">
+                                <input type="text" class="form-control" id="userName" placeholder="User Name">
+                            </div>
+                        </div>
 
-                    <div class="pt-5 ">
-                        <span class="fs-5 fw-bold">Name:</span> <input type="text" name="" id="userName"
-                            placeholder="User Name">
-                    </div>
+                        <div class="mb-3 row align-items-center">
+                            <label for="email" class="col-12 col-md-4 col-form-label text-md-end text-start fs-5 fw-bold">Email:</label>
+                            <div class="col-12 col-md-8">
+                                <input type="email" class="form-control" id="email" placeholder="Email">
+                            </div>
+                        </div>
 
-                    <div class="pt-2">
-                        <span class="fs-5 fw-bold">Email:</span> <input type="email" name="" id="email"
-                            placeholder="Email">
-                    </div>
+                        <div class="mb-4 row align-items-center">
+                            <label for="password" class="col-12 col-md-4 col-form-label text-md-end text-start fs-5 fw-bold">Password:</label>
+                            <div class="col-12 col-md-8">
+                                <input type="password" class="form-control" id="password" placeholder="Password">
+                            </div>
+                        </div>
 
-                    <div class="pb-5 pt-2">
-                        <span class="d-flex fs-5  fw-bold " style="margin-left: 10%;">Password:<input  type="password" name="" id="password"
-                            placeholder="password"></span>
-                    </div>
-
-                    <button onclick="signup()" class="btn btn-2 bg-dark text-white ">signup</button>
-                    <a href="./pages/login/login.html">Login</a>
+                        <button type="button" onclick="signup()" class="btn btn-dark text-white mb-3">Signup</button>
+                        <div>
+                            <a href="./pages/login/login.html" style="text-decoration: none;">Login</a>
+                        </div>
+                    </form>
                 </div>
-
             </div>
 
-            <div class="col-md-6 mt-5 ps-3">
-                <img height="250px" src="signup pic.jpg" alt="">
+            <div class="col-md-6 mt-5 ps-3 text-center">
+                <img width="430px" class="img-fluid" src="signup pic.jpg" alt="">
             </div>
         </div>
     </div>
