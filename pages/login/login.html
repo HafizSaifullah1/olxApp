@@ -14,7 +14,7 @@
             margin-top: 10vh;
         }
         .form-control {
-            width: 70%;
+            width: 100%;
             padding: 10px;
             font-size: 16px;
             margin-bottom: 15px;
@@ -22,14 +22,28 @@
         .btn-login {
             background-color: #343a40;
             color: white;
-            width: 19%;
+            width: 100%;
             padding: 10px;
             font-size: 16px;
         }
         .login-img {
-            max-width: 60%;
-            height: auto;
+            max-width: 80%;
+            height: 60%;
             margin-top: 60px;
+        }
+        @media (min-width: 768px) {
+            .form-control {
+                width: 70%;
+            }
+            .btn-login {
+                width: 30%;
+                
+            }
+            .login-img{
+                    width: 70%;
+                    height: 70%;
+                 
+                }
         }
     </style>
 </head>
@@ -42,29 +56,30 @@
                     <h1>Login</h1>
                 </div>
 
-                <div class="card shadow p-4 ">
+                <div class="card shadow p-4">
                     <form>
-                        <div class="mb-3 ms-5">
+                        <div class="mb-3">
                             <label for="email" class="form-label">Email address</label>
                             <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
                         </div>
-                        <div class="mb-3 ms-5">
+                        <div class="mb-3">
                             <label for="password" class="form-label">Password</label>
                             <input type="password" class="form-control" id="password" placeholder="Password">
                         </div>
-                        <button  type="submit" class="btn btn-login ms-5">Login</button>
+                        <button type="submit" class="btn btn-login">Login</button>
                     </form>
                     <p class="pt-3 text-center">Not registered? <a href="../../index.html">Signup here</a></p>
                 </div>
             </div>
 
-            <div class="col-lg-6 mt-4 mt-lg-0">
+            <div class="col-lg-6  mt-lg-0">
                 <img src="login pic.jpg" class="login-img img-fluid" alt="Login Image">
             </div>
         </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="login.js"></script>
 </body>
 
 </html>
