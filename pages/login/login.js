@@ -28,20 +28,21 @@ const auth = getAuth()
 let email = document.getElementById("email")
 let password = document.getElementById("password")
 
-window.Login = function () {
+window.login = function () {
+
     var obj = {
-        
         email: email.value,
-        password: password.value,
+        password: password.value
     }
     console.log(obj)
 
-    signInWithEmailAndPassword (auth, obj.email, obj.password)
+    signInWithEmailAndPassword(auth, obj.email, obj.password)
 
         .then(function (res) {
             console.log(res)
+
             alert("Welcome")
-            window.location.assign("../main/main.html")
+            window.location.assign("/pages/main/main.html")
         })
         .catch(function (err) {
             alert(err);

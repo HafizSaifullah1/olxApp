@@ -9,16 +9,22 @@
     <style>
         body {
             background-color: #f8f9fa;
+            height: 100vh;
         }
-        .container {
-            margin-top: 10vh;
+
+        .login-container {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
+
         .form-control {
-            width: 100%;
             padding: 10px;
             font-size: 16px;
             margin-bottom: 15px;
         }
+
         .btn-login {
             background-color: #343a40;
             color: white;
@@ -26,54 +32,50 @@
             padding: 10px;
             font-size: 16px;
         }
+
         .login-img {
-            max-width: 80%;
-            height: 60%;
-            margin-top: 60px;
+            max-width: 100%;
+            height: auto;
         }
+
         @media (min-width: 768px) {
             .form-control {
-                width: 70%;
+                width: 100%;
             }
+
             .btn-login {
-                width: 30%;
-                
+                width: 100%;
             }
-            .login-img{
-                    width: 70%;
-                    height: 70%;
-                 
-                }
         }
     </style>
 </head>
 
 <body>
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-6 mx-auto">
-                <div class="text-center">
-                    <h1>Login</h1>
-                </div>
+    <div class="container login-container">
+        <div class="row g-0">
+            <div class="col-lg-6 d-flex align-items-center justify-content-center">
+                <div class="w-100">
+                    <div class="text-center mb-4">
+                        <h1>Login</h1>
+                    </div>
 
-                <div class="card shadow p-4">
-                    <form>
+                    <div class="card shadow p-4">
                         <div class="mb-3">
                             <label for="email" class="form-label">Email address</label>
-                            <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
+                            <input type="email" class="form-control" id="email" placeholder="Enter email">
                         </div>
                         <div class="mb-3">
                             <label for="password" class="form-label">Password</label>
                             <input type="password" class="form-control" id="password" placeholder="Password">
                         </div>
-                        <button type="submit" class="btn btn-login">Login</button>
-                    </form>
-                    <p class="pt-3 text-center">Not registered? <a href="../../index.html">Signup here</a></p>
+                        <button onclick="login()" type="submit" class="btn btn-login">Login</button>
+                        <p class="pt-3 text-center">Not registered? <a href="../../index.html">Signup here</a></p>
+                    </div>
                 </div>
             </div>
 
-            <div class="col-lg-6  mt-lg-0">
-                <img src="login pic.jpg" class="login-img img-fluid" alt="Login Image">
+            <div class="col-lg-6 d-none d-lg-flex align-items-center justify-content-center">
+                <img src="login pic.jpg" class="login-img" alt="Login Image">
             </div>
         </div>
     </div>

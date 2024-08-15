@@ -30,7 +30,6 @@ var image = document.getElementById("image")
 var price = document.getElementById("price")
 var condition = document.getElementById("condition")
 var description = document.getElementById("description")
-var location = document.getElementById("location")
   
 var id = localStorage.getItem("p-Id")
 
@@ -48,7 +47,6 @@ function getData() {
         price.innerHTML = detail.productPrice
         condition.innerHTML = detail.date
         description.innerHTML = detail.textArea
-        location.innerHTML = detail.location
 
     })
 

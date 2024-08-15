@@ -30,7 +30,6 @@ var productPrice = document.getElementById("productPrice")
 var productName = document.getElementById("productName")
 var imgUrl = document.getElementById("imgUrl")
 var date = document.getElementById("date")
-var location = document.getElementById("location")
 var textArea = document.getElementById("textArea")
 
 
@@ -41,7 +40,6 @@ window.addProduct = function (){
         productName: productName.value,
         imgUrl: imgUrl.value,
         date: date.value,
-        location:location.value,
         textArea: textArea.value
     }
     // console.log(obj)

@@ -44,18 +44,23 @@ for(let i=0; i<productData.length; i++){
     var obj = productData[i]
     console.log(obj)
     main.innerHTML += `
-    <div class="card mx-4 mt-5" >
-    <img  class="img-fluid" src="${obj.imgUrl}"
-      class="card-img-top" alt="...">
-    <div class="card-body">
-      <h4 class="card-title">${obj.productName}</h4>
-      <h5>${obj.productPrice}</h5>
-      <h6>${obj.location} </h6>
-      <p class="card-text">${obj.textArea}</p>
-      <p class="card-text">${obj.date}</p>
-      <a href="../details/detail.html" class="btn btn-primary" onclick="getId('${obj.id}')">Details</a>
-    </div>
-  </div>`
+  
+            <!-- Example card 1 -->
+            <div class="col-md-4 pt-5 p-2 pe-5" >
+                <div class="card">
+                    <img src="${obj.imgUrl}" class="card-img-top img-fluid" alt="...">
+                    <div class="card-body">
+                        <h4 class="card-title">${obj.productName}</h4>
+                        <h5>${obj.productPrice}</h5>
+                        <p class="card-text">${obj.textArea}</p>
+                        <p class="card-text">${obj.date}</p>
+                        <a href="../details/detail.html" class="btn btn-primary" onclick="getId('${obj.id}')">Details</a>
+                    </div>
+                
+            
+  
+  
+  `
       
 
 }
