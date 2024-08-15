@@ -42,7 +42,7 @@ window.login = function () {
             console.log(res)
 
             alert("Welcome")
-            window.location.assign("/pages/main/main.html")
+            window.location.assign("../main/main.html")
         })
         .catch(function (err) {
             alert(err);
